@@ -1,3 +1,6 @@
-platform :ios, '6.0'
+source 'https://github.com/CocoaPods/Specs.git'
+inhibit_all_warnings!
+platform :ios, "8.0"
+use_frameworks!
 
-pod 'UIActivityIndicator-for-SDWebImage', '~> 1.0.3'
+pod 'SDWebImage', '3.7.5'

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73097D0853974B19AB5C3B09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD3B240B0CD4914879609DB /* libPods.a */; };
+		7462819B435BA339B9993DA4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD3D373D145C2F285C26285 /* Pods.framework */; };
 		F8E3546F18574013000755C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E3546E18574013000755C6 /* Foundation.framework */; };
 		F8E3547118574013000755C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E3547018574013000755C6 /* CoreGraphics.framework */; };
 		F8E3547318574013000755C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E3547218574013000755C6 /* UIKit.framework */; };
@@ -26,8 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		295238687EF0436DB79CB4C8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		4FD3B240B0CD4914879609DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC35A9A95A78E0080EBB604 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		702DC1FC43D8E444F849723E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DFD3D373D145C2F285C26285 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E3546B18574013000755C6 /* NZCircularImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZCircularImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E3546E18574013000755C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8E3547018574013000755C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,13 +62,22 @@
 				F8E3547118574013000755C6 /* CoreGraphics.framework in Frameworks */,
 				F8E3547318574013000755C6 /* UIKit.framework in Frameworks */,
 				F8E3546F18574013000755C6 /* Foundation.framework in Frameworks */,
-				73097D0853974B19AB5C3B09 /* libPods.a in Frameworks */,
+				7462819B435BA339B9993DA4 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88B16B6CAE04640171DC2557 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CC35A9A95A78E0080EBB604 /* Pods.debug.xcconfig */,
+				702DC1FC43D8E444F849723E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F8E3546218574013000755C6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +85,7 @@
 				F8E3546D18574013000755C6 /* Frameworks */,
 				F8E354DA18574C03000755C6 /* NZCircularImageView */,
 				F8E3546C18574013000755C6 /* Products */,
-				295238687EF0436DB79CB4C8 /* Pods.xcconfig */,
+				88B16B6CAE04640171DC2557 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +105,7 @@
 				F8E3547018574013000755C6 /* CoreGraphics.framework */,
 				F8E3547218574013000755C6 /* UIKit.framework */,
 				F8E3548D18574013000755C6 /* XCTest.framework */,
-				4FD3B240B0CD4914879609DB /* libPods.a */,
+				DFD3D373D145C2F285C26285 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,6 +200,7 @@
 				F8E3546818574013000755C6 /* Frameworks */,
 				F8E3546918574013000755C6 /* Resources */,
 				B7E6749C5CF8460B9F253387 /* Copy Pods Resources */,
+				5BC58C6B0C5A46159E55F231 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NZ;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "No Zebra Network";
 			};
 			buildConfigurationList = F8E3546618574013000755C6 /* Build configuration list for PBXProject "NZCircularImageView" */;
@@ -246,6 +257,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5BC58C6B0C5A46159E55F231 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B7E6749C5CF8460B9F253387 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C34420F70D4B42B486CE2ACF /* Check Pods Manifest.lock */ = {
@@ -330,6 +356,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -344,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -376,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -384,13 +411,16 @@
 		};
 		F8E3549E18574013000755C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 295238687EF0436DB79CB4C8 /* Pods.xcconfig */;
+			baseConfigurationReference = 6CC35A9A95A78E0080EBB604 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/SupportingFiles/NZCircularImageView-Prefix.pch";
 				INFOPLIST_FILE = "Example/SupportingFiles/NZCircularImageView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NZN.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,13 +428,16 @@
 		};
 		F8E3549F18574013000755C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 295238687EF0436DB79CB4C8 /* Pods.xcconfig */;
+			baseConfigurationReference = 702DC1FC43D8E444F849723E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/SupportingFiles/NZCircularImageView-Prefix.pch";
 				INFOPLIST_FILE = "Example/SupportingFiles/NZCircularImageView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NZN.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

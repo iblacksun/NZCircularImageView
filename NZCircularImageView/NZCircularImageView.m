@@ -139,7 +139,8 @@
 #endif
     
     NSURL *url = [NSURL URLWithString:mStringUrl];
-    [self setImageWithURL:url placeholderImage:placeholder options:options usingActivityIndicatorStyle:activityStyle];
+    
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:options];
 }
 
 #pragma mark -
